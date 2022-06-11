@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{
+                background-color: brown;
+                padding: 20px;
+                margin: 20px;
+                color: #fff;
+                display: none;
+            }                    
+            button{
+                height: 40px;
+                width: 70px;
+                background-color: white;
+                border: 2px solid blueviolet;
+                font-size: 17px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="button" id="show">Show</button>
+        <button type="button" id="hide">Hide</button>
+        <button type="button" id="toggle">Toggle</button>        
+
+        <div id="paraDiv">
+            <p>This is a Paragraph</p>
+            <p>This is a Paragraph</p>
+            <p>This is a Paragraph</p>
+            <p>This is a Paragraph</p>
+            <p>This is a Paragraph</p>
+            <p>This is a Paragraph</p>
+        </div>
+
+        <script src="assets/js/jquery.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#show").click(function(){
+                    $("#paraDiv").show("slow");
+                });
+
+                $("#hide").click(function(){
+                    $("#paraDiv").hide("fast");
+                });
+
+                $("#toggle").click(function(){
+                    $("#paraDiv").toggle(2000);
+                });
+            });
+        </script>
+    </body>
+</html>

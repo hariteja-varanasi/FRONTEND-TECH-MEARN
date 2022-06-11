@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Tag</title>
+    <!-- <style>
+        dialog{
+            display: block;
+        }
+    </style> -->
+</head>
+<body>
+    <center>
+        <h2>DETAILS TAG</h2>
+        <p>This tag is used to specify the additional details on the web page that the user can view or hide on demand</p>
+    </center>    
+    <hr>
+    <details>
+        <summary>HTML Details</summary>
+        <h1>HTML</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut impedit accusamus id nihil facilis libero esse 
+            magnam odio eius et eos dicta, exercitationem distinctio veritatis, possimus expedita nulla explicabo voluptatum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut impedit accusamus id nihil facilis libero esse 
+            magnam odio eius et eos dicta, exercitationem distinctio veritatis, possimus expedita nulla explicabo voluptatum!
+        </p>
+    </details>
+    <details>
+        <summary>CSS Details</summary>
+        <h1>CSS</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut impedit accusamus id nihil facilis libero esse 
+            magnam odio eius et eos dicta, exercitationem distinctio veritatis, possimus expedita nulla explicabo voluptatum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut impedit accusamus id nihil facilis libero esse 
+            magnam odio eius et eos dicta, exercitationem distinctio veritatis, possimus expedita nulla explicabo voluptatum!
+        </p>
+    </details>
+    <details>
+        <summary>JS Details</summary>
+        <h1>JS</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut impedit accusamus id nihil facilis libero esse 
+            magnam odio eius et eos dicta, exercitationem distinctio veritatis, possimus expedita nulla explicabo voluptatum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut impedit accusamus id nihil facilis libero esse 
+            magnam odio eius et eos dicta, exercitationem distinctio veritatis, possimus expedita nulla explicabo voluptatum!
+        </p>
+    </details>
+
+    <hr>
+
+    <center>
+        <h3>TIME TAG</h3>
+        <p>
+            <b>HTML time</b> tag is used to define date and time. It displays time value in a 24 hour clock or a precise date in a Gregorian calendar in HTML.
+        </p>
+    </center>
+
+    <hr>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae atque nostrum laudantium deserunt aut magnam molestias 
+        beatae et a, iure, quia nisi mollitia itaque aspernatur non. Voluptas vero voluptates ullam.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur 2:30 PM adipisicing elit. Molestiae atque nostrum laudantium deserunt aut magnam molestias 
+        beatae et a, iure, quia nisi mollitia itaque aspernatur non. Voluptas vero voluptates ullam.
+        <time>2:30</time>PM
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae atque nostrum laudantium deserunt aut magnam molestias 
+        beatae et a, iure, quia nisi mollitia itaque aspernatur non. Voluptas vero voluptates ullam.
+    </p>
+
+    <dialog id="popup">
+        <button type="button" onclick="closeDialog();">&times;</button>
+        <h1>Hi POPUP</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolorem rem quas fugit sequi assumenda possimus cum earum, 
+            laborum iste esse rerum temporibus officia repellendus, ipsam neque? Facere, repellat fugit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolorem rem quas fugit sequi assumenda possimus cum earum, 
+            laborum iste esse rerum temporibus officia repellendus, ipsam neque? Facere, repellat fugit.
+        </p>
+    </dialog>
+
+    <hr>
+
+    <button type="button" onclick="openDialog();">OPEN DIALOG</button>
+    <script>
+        function openDialog() {
+            document.getElementById("popup").show();
+        }
+        function closeDialog() {
+            document.getElementById("popup").close();
+        }        
+    </script>
+</body>
+</html>

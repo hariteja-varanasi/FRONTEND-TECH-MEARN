@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{
+                border: 1px solid maroon;
+                padding: 10px;
+                margin: 50px;
+            }
+
+            button{
+                height: 60px;
+                width: 250px;
+                background-color: white;
+                border: 2px solid maroon;
+                font-size: 17px;
+                border-radius: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div">
+            <h1>Hello</h1>
+            <p>This is a para</p>
+            <p>This is a para</p>
+            <p>This is a para</p>
+            <p>This is a para</p>
+            <p>This is a para</p>
+            <p>This is a para</p>
+            <p>This is a para</p>
+            <p>This is a para</p>
+            <p>This is a para</p>
+        </div>
+        
+        <button type="button" id="outerHeight">Outer Height</button>
+        <button type="button" id="outerWidth">Outer Width</button>
+
+        <script src="assets/js/jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#outerHeight").click(function(){
+                    alert($("#div").outerHeight());
+                });
+                $("#outerWidth").click(function(){
+                    alert($("#div").outerWidth());
+                });
+            });
+        </script>        
+    </body>
+</html>

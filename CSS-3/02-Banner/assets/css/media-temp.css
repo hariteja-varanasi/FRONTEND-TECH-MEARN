@@ -1,0 +1,83 @@
+/* MOBILE MAX SCREEN WIDTH - 768PX */
+@media(max-width:768px){
+    header{
+        background-color: teal;
+    }
+    
+    header>nav{
+        text-align: center;
+        padding: 20px;
+        margin: 0%;
+    }
+    
+    header>nav>ul{        
+        float: none;
+    }
+    
+    header>nav>ul>li{
+        display: block;        
+    }
+
+    header>nav>ul>li>a{
+        color: #000;
+    }
+
+    /*.navigation-desktop{
+        display: none;
+    }
+
+    .navigation-mobile{
+        display: block;
+        width: 100px; 
+        height: 100px;
+    }*/
+
+    .navigation-desktop{
+        background: url(../images/mobile.jpg) no-repeat;        
+        background-position: left;
+        background-size: contain;
+        width: 75px;
+        height: 100px;
+        display: block;
+    }
+    
+}
+
+/* MOBILE MAX SCREEN WIDTH - 768PX to 1200PX */
+@media(min-width:769px) and (max-width:1200px){
+    header{
+        background-color: grey;
+    }
+    
+    header>nav{
+        text-align: center;
+        padding: 20px;        
+    }
+    
+    header>nav>ul{        
+        float: none;
+    }
+    
+    header>nav>ul>li>a{
+        color: #000;
+    }
+
+    /*.navigation-desktop{
+        display: none;
+    }
+
+    .navigation-tab{
+        display: block;
+        width: 100px; 
+        height: 100px;
+    }*/
+
+    .navigation-desktop{
+        background: url(../images/tab.jpg);
+        background-position: left;
+        background-size: contain;
+        width: 75px;
+        height: 100px;
+        display: block;
+    }
+}

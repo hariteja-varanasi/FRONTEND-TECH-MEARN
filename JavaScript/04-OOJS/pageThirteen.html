@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            h3{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Inheritance chain using __proto__ keyword</h3>
+
+        <script>
+            var cOne = {
+                cOneTitle: "React",
+                cOneFee: 23423
+            };
+
+            var cTwo = {
+                cTwoTitle: "Angular",
+                cTwoFee: 23234,
+                __proto__: cOne
+            }
+
+            var cThree = {
+                cThreeTitle: "NodeJS",
+                cThreeFee: 34343,
+                __proto__: cTwo
+            }
+
+            var bep = {
+                name: "Be-Practical",
+                __proto__: cThree
+            }
+
+            document.write(`<h3> ${ bep } </h3>`);
+            console.log('bep = ', bep);
+            document.write(`<h3> ${ bep.cOneTitle } </h3>`);
+            document.write(`<h3> ${ bep.cOneFee } </h3>`);
+            document.write(`<h3> ${ bep.cTwoTitle } </h3>`);
+            document.write(`<h3> ${ bep.cTwoFee } </h3>`);
+            document.write(`<h3> ${ bep.cThreeTitle } </h3>`);
+            document.write(`<h3> ${ bep.cThreeFee } </h3>`);
+            document.write(`<h3> ${ bep.name } </h3>`);
+        </script>
+    </body>
+</html>

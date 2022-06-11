@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array Join -> Object array</title>
+    </head>
+    <body>
+        <h3>Array join -> Object array</h3>
+        <script>
+            let cOne= [
+                {
+                    id: 123,
+                    name: 'itemOne',
+                    email: 'itemOne@itemone.com'
+                },
+                {
+                    id: 124,
+                    name: 'itemTwo',
+                    email: 'itemTwo@itemtwo.com'
+                }
+            ];
+            let cTwo= [
+                {
+                    id: 233,
+                    name: 'itemOne',
+                    email: 'itemOne@itemone.com'
+                },
+                {
+                    id: 255,
+                    name: 'itemTwo',
+                    email: 'itemTwo@itemtwo.com'
+                }
+            ];
+            let cThree= [
+                {
+                    id: 334,
+                    name: 'itemOne',
+                    email: 'itemOne@itemone.com'
+                },
+                ...cOne,
+                ...cTwo
+            ];
+
+            document.write(`<h3>cOne is ${ cOne } </h3>`);
+            document.write(`<h3>cTwo is ${ cTwo } </h3>`);
+            document.write(`<h3>cThree is ${ cThree } </h3>`);
+        </script>
+    </body>
+</html>

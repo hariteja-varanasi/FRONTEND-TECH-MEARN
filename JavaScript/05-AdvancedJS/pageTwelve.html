@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Error Handling</title>
+    </head>
+    <body>
+        <h3>Error Handling</h3>        
+        <script>
+           fetch(`https://panorbit.in/api/users.json`)
+           .then(response => response.json())
+           .then( result => {
+               console.log(result);
+
+               result.users.forEach( item => {
+                   let img = document.createElement('img');
+                   img.src = item.profilepicture;
+                   img.alt = "./assets/images/image.jpg";
+                   img.width = "100px";
+                   img.height = "100px";
+                   document.body.append(img);
+
+                   let hTwo = document.createElement('h2');
+                   hTwo.innerHTML = item.name;
+                   document.body.append(hTwo);
+
+                   setTimeout(function () {
+                       img.remove();
+                   }, 4000);
+               });
+               //document.write(`<h3>result is ${ result } </h3>`);
+           })
+           .catch(error => { console.log("ERROR : ", error.message) }); 
+        </script>
+    </body>
+</html>

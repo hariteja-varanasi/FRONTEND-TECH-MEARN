@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            h1{
+                background-color: dimgray;
+                color: #fff;
+                padding: 10px;
+            }
+
+            button{
+                height: 60px;
+                width: 250px;
+                background-color: white;
+                border: 2px solid maroon;
+                font-size: 17px;
+                border-radius: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>This is a Paragraph</p>
+        <p>This is another Paragraph</p>        
+
+        <button id="q">WRAP BTN</button>
+        <button id="w">UNWRAP BTN</button>
+
+        <script src="assets/js/jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#q").click(function(){
+                    $("p").wrap("<h1></h1>");
+                });
+                $("#w").click(function(){
+                    $("p").unwrap();
+                });
+            });
+        </script>
+    </body>
+</html>

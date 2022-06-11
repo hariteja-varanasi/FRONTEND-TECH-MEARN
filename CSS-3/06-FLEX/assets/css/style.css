@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container>.item{
+    height: 200px;
+    width: 350px;
+    background-color: teal;
+    border-radius: 5px;
+    margin: 20px;
+    text-align: center;
+    color: #fff;
+    box-shadow: -3px -3px 3px #ccc, 3px 3px 3px #ccc;
+}
+
+.containerOne{
+    justify-content: space-between;
+}
+
+.containerTwo{
+    justify-content: center;
+    height: 500px;
+    border: 2px solid #ccc;
+    align-items: center;
+}
+
+.containerTwo>.item:first-child{
+    align-self: flex-start;
+    /*font-size: 30px;*/
+}
+
+.containerTwo>.item:last-child{
+    align-self: flex-end;
+    /*font-size: 50px;*/
+}

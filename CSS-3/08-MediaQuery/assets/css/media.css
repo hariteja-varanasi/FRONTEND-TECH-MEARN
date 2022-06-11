@@ -1,0 +1,92 @@
+@media(min-width:768px){
+    .desktopBanner, .tabBanner{
+        display: none;
+    }
+    .mobBanner{
+        display: block;
+        position: relative;
+    }
+    .mobBanner>header{
+        background: linear-gradient(to right, #159957, #155799);
+        padding: 10px;
+    }    
+    .mobBanner>header>nav{
+        text-align: center;
+    }    
+    .mobBanner>header>nav>ul{
+        list-style-type: none;
+    }
+    .mobBanner>header>nav>ul>li{
+        padding: 20px;
+    }    
+    .mobBanner>header>nav>ul>li:hover{
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));        
+    }
+    .mobBanner>header>nav>ul>li>a{
+        color: #fff;
+        text-decoration: none;
+    }
+    .mobBanner>video{
+        width: 100%;
+    }
+    .mobBanner>h1{
+        position: absolute;
+        font-size: 55px;
+        top: 50%;
+        left: 20%;
+        color: #159957;
+        text-shadow: 2px 2px 2px #000;
+    }    
+    [class*="col"]{
+        width: 100%;
+    }
+}
+@media(min-width:769px) and (max-width:1024px){
+    .desktopBanner, .mobBanner{
+        display:none
+    }
+    .tabBanner{
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+    .tabBanner>header{
+        background: linear-gradient(to right, #2193b0, #6dd5ed);
+        padding: 10px;
+    }
+    .tabBanner>header>nav{
+        text-align: center;
+    }
+    .tabBanner>header>nav>ul{
+        list-style-type: none;
+    }
+    .tabBanner>header>nav>ul>li{
+        display: inline-block;
+        padding: 20px;
+        border-radius: 2px;
+    }
+    .tabBanner>header>nav>ul>li:hover{
+        background: #fff;
+    }
+    .tabBanner>header>nav>ul>li:hover a{
+        color: #2193b0;
+    }
+    .tabBanner>header>nav>ul>li>a{
+        color: #fff;
+        text-decoration: none;
+    }
+    .tabBanner>video{
+        width: 100%;
+    }
+    .tabBanner>h1{
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        font-size: 60px;
+        color: #fff;
+        text-shadow: 3px 3px 2px green;
+    }
+    [class*="col"]{
+        float: left;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>Inheritance in Constructor</h3>
+        <script>
+            function Car(name) {
+                this.name = name;
+            }
+
+            Car.prototype.display = function () {
+                document.write(`<h3>Car Name is ${ this.name } </h3>`);
+            }
+
+            function Bus(name) {
+                this.name = name;
+            }
+
+            Bus.prototype.display = function () {
+                document.write(`<h3>Bus Name is ${ this.name } </h3>`);
+            }
+
+            /*function Bus(name) {
+                this.name = name;
+            }
+
+            Bus.prototype.display = function () {
+                document.write(`<h3>Bus name is ${ this.Name } </h3>`);
+            }*/
+
+            //Car is the parent class and Bus is the child class
+            Bus.prototype.__proto__ = Car.prototype;
+
+            //This is equivalent to saying Class Bus extends Car
+
+            let x = new Bus("Tata");
+
+            x.display();
+
+            Car.prototype = Bus.prototype;
+
+            let y = new Bus("Tata");
+
+            y.display();
+        </script>
+    </body>
+</html>

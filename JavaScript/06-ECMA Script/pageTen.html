@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>Class syntax contains two components</h3>
+        <ul>
+            <li>Class Declarations</li>
+            <li>Class Expressions</li>
+        </ul>
+        <hr>
+
+        <script>
+            document.write("<h1>Class Declarations</h1>");
+
+            class StudentOne{
+                constructor(){
+                    var dataOne = "This is a default Class";
+                    document.write("<b>StudentOne class : <b> " + dataOne + "<br><br>");
+                }
+            }
+            var studOne = new StudentOne();
+
+            class StudentTwo{
+                constructor(){}
+                display(){
+                    var dataTwo = "This is a default Class with custom method";
+                    document.write("<b>StudentTwo class : <b> " + dataTwo + "<br><br>");
+                }
+            }
+            var studTwo = new StudentTwo();
+            studTwo.display();
+
+            class StudentThree{
+                constructor(id, name){
+                    this.idOne = id;
+                    this.nameOne = name;
+                }
+                display(){
+                    document.write("<b>StudentThree Class with Parameterised Constructor : <b> " 
+                        + this.idOne + " " + this.nameOne + "<br><br>");
+                }
+            }
+            var studThree = new StudentThree("000", "Hariteja Varanasi");
+            var studFour = new StudentThree("000", "Varanasi Hariteja");
+            studThree.display();
+            studFour.display();
+
+            document.write("<h1>Class Expression Example</h1>");
+            var Emp = class{
+                constructor(id, name){
+                    this.idTwo = id;
+                    this.nameTwo = name;
+                }
+                display(){
+                    document.write(String(this.idTwo)+" "+this.nameTwo);
+                }
+            }
+            var emp =  new Emp("000", "Hariteja Varanasi");
+            emp.display();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            document.write("<h1>By creating instance of Object directly (using new keyword)</h1>");
+
+            var empDetailsOne = new Object();
+
+            console.log(typeof(empDetailsOne));
+
+            empDetailsOne.firstName = "Hariteja";
+            empDetailsOne.middleName = "Rajasharma";
+            empDetailsOne.lastName = "Varanasi";
+            empDetailsOne.fullName = function(){return this.firstName + " " + this.middleName + " " + this.lastName};
+
+            document.write(empDetailsOne.firstName + "<br/>");
+            document.write(empDetailsOne.lastName + "<br/>");
+            document.write(empDetailsOne.fullName() + "<br/>");
+
+            document.write("<h1>By using an object constructor (using new keyword)</h1>");
+
+            function studentInfo(firstName, lastName){
+
+                var fn, ln; //Local Properties
+                //fn = firstName;
+                //ln = lastName;
+
+                //constructor type properties
+                this.fn = firstName;
+                this.ln = lastName;
+
+                //document.write("First Name is : " + fn + "<br/>");
+                //document.write("Last Name is : " + ln + "<br/>");
+            }
+            studentInfo("HTML", "CSS");
+
+            var studentDetails = new studentInfo("HTML", "CSS");
+            document.write(typeof(studentDetails) + "<br/>");
+
+            document.write("First Name is : " + studentDetails.fn + "<br/>");
+            document.write("Last Name is : " + studentDetails.ln + "<br/>");
+        </script>        
+    </body>
+</html>

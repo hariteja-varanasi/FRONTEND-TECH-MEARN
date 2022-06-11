@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Function</title>
+    </head>
+    <body>
+        <center>
+            <h1>Function</h1>
+        </center>        
+        <pre>
+            1. Default Function (No Parameter, No Return)
+            2. Without Parameter, with Return value
+            3. With Parameter, Without Return Value
+            4. With Parameter, With Return Value
+        </pre>
+        <script>
+            document.write("<h1>Default Function (No Parameter, No Return)</h1>");
+            function bePractical(){
+                document.write("This is Default Function");
+            }
+            bePractical();
+        </script>
+        <script>
+            document.write("<h1>Without Parameter, with Return Value</h1>");
+            function addFunction(){
+                var firstNumber = 10, lastNumber = 20, sum;
+                sum = firstNumber + lastNumber;
+                return sum;
+                //document.write("Sum is ", sum);
+            }
+            document.write("Sum is ", addFunction());
+        </script>
+
+        <script>
+            document.write("<h1>With Parameter, Without Return Value</h1>");
+            function studentDetails(firstName, lastName){
+                document.write("First Name : ", firstName, "<br>");
+                document.write("Last Name : ", lastName, "<br>");
+
+                var fn, ln;
+                fn = firstName;
+                ln = lastName;
+                document.write("First Name : ", fn, "<br>");
+                document.write("Last Name : ", ln, "<br>");
+            }
+            studentDetails("HTML-5", "CSS-3");
+        </script>
+
+        <script>
+            document.write("<h1>With Parameter, With Return Value</h1>");
+            function studentDetails(firstName, lastName){
+                document.write("First Name : ", firstName, "<br>");
+                document.write("Last Name : ", lastName, "<br>");
+
+                var fn, ln, fullName;
+                fn = firstName;
+                ln = lastName;
+
+                fullName = fn + " " + ln;
+                
+                return fullName;
+            }
+            document.write("Full Name : ", studentDetails("Adolf", "Hitler"));
+        </script>
+
+        <!-- ECMA SCRIPT CODE -->
+        <script>
+            document.write("<h1>Function Defining</h1>");
+            function sum(a,b) {
+                return a+b;
+            }
+            document.write(`<h3> sum = ${ sum(33,44) } </h3>`);
+
+            document.write(`<h1>Function Expressions</h1>`);
+
+            var fullName = function(firstName, lastName){
+                return firstName + " " + lastName;
+            };
+
+            document.write(`<h3> fullName = ${ fullName("HTML", "CSS")} </h3>`);
+
+            document.write("<h1>Arrow Function</h1>");
+
+            var rem = (a,b) => {
+                return a%b;
+            };
+            document.write(`<h3> rem = ${ rem(33,4) } </h3>`);
+        </script>
+
+        <script>
+            document.write("<h1> Call Back Function</h1>");
+            
+            function howAreYou(health, yes, no) {
+                //document.write("Health : ", health);
+                if(confirm(health)){
+                    yes();
+                }
+                else{
+                    no();
+                }
+            }
+             
+            howAreYou("How is Your Health?", function(){document.write("Good<br/>")}, function(){document.write("Bad<br/>")});
+        </script>
+
+    </body>
+</html>

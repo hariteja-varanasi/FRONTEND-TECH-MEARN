@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Type Conversion</title>
+    </head>
+    <body>
+        <center>
+            <h1>Type Conversion</h1>
+        </center>
+        <hr>
+
+        <script>
+            document.write("<h1>Converting Values to Numbers</h1>");
+            var str = "123";
+            document.write("Type of str is : ", typeof(str) + "<br>");
+
+            var num = Number(str);
+            document.write("Type of num is : ", typeof num + "<br>");
+
+            var numberOne = Number("10.5");
+            document.write("Type of numberOne is : ", typeof(numberOne) + "<br>");
+
+            var x = "123.343";
+            var y = 1245.6770578654;
+
+            var a = Number(x);
+            document.write(`<h3> Number = ${ a } </h3>`);
+
+            var aOne = parseInt(x);
+            document.write(`<h3> int = ${ aOne } </h3>`);
+
+            var aTwo = parseFloat(x);
+            var aThree = parseFloat(y);
+
+            document.write(`<h3> float = ${ aTwo } </h3>`);
+            document.write(`<h3> float = ${ aThree.toFixed(5) } </h3>`);
+
+            var nOne = Number(true);
+            document.write("nOne is : ", nOne, "<br>");
+
+            nOne = Number(false);
+            document.write("nOne is : ", nOne, "<br>");
+
+            nOne = Number(null);
+            document.write("nOne is : ", nOne, "<br>");
+
+            nOne = Number(" 123 ");
+            document.write("nOne is : ", nOne, "<br>");
+
+            nOne = Number(" ");
+            document.write("nOne is : ", nOne, "<br>");
+
+            nOne = Number("");
+            document.write("nOne is : ", nOne, "<br>");
+
+            nOne = Number("123e-1");
+            document.write("nOne is : ", nOne, "<br>");
+
+            nOne = Number("0XFF");
+            document.write("nOne is : ", nOne, "<br>");
+
+            nOne = Number("undefined");
+            document.write("nOne is : ", nOne, "<br>");
+
+            nOne = Number("null");
+            document.write("nOne is : ", nOne, "<br>");
+
+            nOne = Number("Hello World!");
+            document.write("nOne is : ", nOne, "<br>");
+
+        </script>
+
+        <script>
+            document.write("<h1>Converting Values to Strings</h1>");
+            var bool = true;
+            document.write(typeof bool+"<br>");
+
+            var str = String(bool);
+            document.write(typeof str+"<br>");
+
+            var strOne = String(10.5);
+            document.write("<b>strOne is : <b>", strOne, "<br>");
+            document.write("<b>strOne is : <b>", typeof(strOne), "<br>");
+
+            strOne = String(123);
+            document.write("<b>strOne is : <b>", strOne, "<br>");
+            document.write("<b>strOne is : <b>", typeof(strOne), "<br>");
+
+            strOne = String(100 + 23);
+            document.write("<b>strOne is : <b>", strOne, "<br>");
+            document.write("<b>strOne is : <b>", typeof(strOne), "<br>");
+
+            strOne = String(true);
+            document.write("<b>strOne is : <b>", strOne, "<br>");
+            document.write("<b>strOne is : <b>", typeof(strOne), "<br>");
+
+            strOne = String(false);
+            document.write("<b>strOne is : <b>", strOne, "<br>");
+            document.write("<b>strOne is : <b>", typeof(strOne), "<br>");
+
+            strOne = String(123e-1);
+            document.write("<b>strOne is : <b>", strOne, "<br>");
+            document.write("<b>strOne is : <b>", typeof(strOne), "<br>");
+
+            strOne = String(0xFF);
+            document.write("<b>strOne is : <b>", strOne, "<br>");
+            document.write("<b>strOne is : <b>", typeof(strOne), "<br>");
+
+            strOne = String(undefined);
+            document.write("<b>strOne is : <b>", strOne, "<br>");
+            document.write("<b>strOne is : <b>", typeof(strOne), "<br>");
+
+            strOne = String(null);
+            document.write("<b>strOne is : <b>", strOne, "<br>");
+            document.write("<b>strOne is : <b>", typeof(strOne), "<br>");
+        </script>
+
+        <script>
+            document.write("<h1>Converting Values to Boolean</h1>");
+            var bool = Boolean(0);
+            document.write("bool is : ", bool, "<br>");
+            document.write("type of bool is : ", typeof bool, "<br>");
+
+            var bool = Boolean(null);
+            document.write("bool is : ", bool, "<br>");
+            document.write("type of bool is : ", typeof bool, "<br>");
+
+            var bool = Boolean(false);
+            document.write("bool is : ", bool, "<br>");
+            document.write("type of bool is : ", typeof bool, "<br>");
+
+            var bool = Boolean(undefined);
+            document.write("bool is : ", bool, "<br>");
+            document.write("type of bool is : ", typeof bool, "<br>");
+
+            var bool = Boolean(NaN);
+            document.write("bool is : ", bool, "<br>");
+            document.write("type of bool is : ", typeof bool, "<br>");
+
+            var bool = Boolean("");
+            document.write("bool is : ", bool, "<br>");
+            document.write("type of bool is : ", typeof bool, "<br>");
+
+            var bool = Boolean(1);
+            document.write("bool is : ", bool, "<br>");
+            document.write("type of bool is : ", typeof bool, "<br>");
+
+            var bool = Boolean(true);
+            document.write("bool is : ", bool, "<br>");
+            document.write("type of bool is : ", typeof bool, "<br>");
+            
+        </script>
+
+        <script>
+            document.write("<h1>Type Conversions Using Operators</h1>");
+            /*var x = "10";
+            var y = +x;
+            alert("Type of y is : " + typeof y);
+            alert("y is : " + y);
+
+            var x = 10;
+            var y = x + "";
+            alert("Type of y is : " + typeof y);
+            alert("y is : " + y);
+
+            var x = "15";
+            var y = x - 0;
+            alert("Type of y is : " + typeof y);
+            alert("y is : " + y);*/
+
+            document.write("\"3\" - 2 is : ", "3" - 2 + "<br>");
+            document.write("\"3\" + 2 is : ", "3" + 2 + "<br>");
+            document.write("3 + \"2\" is : ", 3 + "2" + "<br>");
+            document.write("\"3\" * \"2\" is : ", "3" * "2" + "<br>");
+            document.write("\"10\" / \"2\" is : ", "10" / "2" + "<br>");
+        </script>
+        
+    </body>
+</html>

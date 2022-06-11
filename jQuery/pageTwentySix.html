@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    </head>
+    <body>        
+        <h1 id="h1">Enter this heading</h1>
+        <h1 id="h2">Enter this heading then leave</h1>
+        <div id="displayDiv" class="fs-3"></div>
+
+        <script src="assets/js/jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#h1").mouseenter(function(){
+                    $("#displayDiv").text("Mouse entered on heading").show().fadeOut(2000);
+                });
+                $("#h2").mouseleave(function(){
+                    $("#displayDiv").text("Mouse Leave").show().fadeOut(2000);
+                });
+            });
+        </script>
+    </body>
+</html>

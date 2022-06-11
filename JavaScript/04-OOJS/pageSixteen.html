@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>Prototype</h3>
+        <script>
+            function Course(){                
+            }
+
+            Course.prototype.title = "Javascript";
+            Course.prototype.getTitleArrow = () => {
+                document.write(`<h3> function = ${ this.title } </h3>`);
+            }
+
+            Course.prototype.getTitleNormal = function() {
+                document.write(`<h3> function = ${ this.title } </h3>`);
+            }
+
+            let c = new Course();
+            document.write(`<h3> ${ c.title } </h3>`);
+            c.getTitleArrow();
+            c.getTitleNormal();
+        </script>
+    </body>
+</html>

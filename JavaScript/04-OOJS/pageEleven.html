@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Object Methods</title>
+        <style>
+            p{
+                font-size: larger;
+                font-weight: bold;
+                text-align: center;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Object Methods</h1>
+        <script>
+            var user = {
+                name: "Hariteja",
+                email: "hariteja@gmail.com",
+                printFn: function (){
+                    console.log("Hi I am a print Function");
+                    document.write("<h3>Hi I am a print Function</h3>");
+                }
+            };
+
+            var userOne = Object.create(user);
+
+            var userThree = Object.create({
+                firstName: "Hariteja",
+                middleName: "Rajasharma",
+                lastName: "Varanasi"
+            });            
+
+            console.log('userThree = ', userThree);
+            document.write("<p>userThree = " + userThree + "</p>");
+
+            var userFour = {
+                firstName: "Hariteja",
+                middleName: "Rajasharma",
+                lastName: "Varanasi"
+            };
+
+            console.log('userFour = ', userFour);
+            document.write("<p>userThree = " + userFour + "</p>");
+
+            console.log('user = ', user);
+            document.write("<p>user = " + user + "</p>");
+
+            console.log('userOne = ', userOne);
+            document.write("<p>userOne = " + userOne + "</p>");
+
+            document.write(`<p>Before set = ${ Object.getPrototypeOf(userOne) === user }</p>`);
+
+            const userTwo = {
+                age: 12,
+                height: '5.9ft'
+            };
+
+            //Object.setPrototypeOf(destination, source)
+            Object.setPrototypeOf(userOne, userTwo);
+
+            document.write(`<p>After set = ${ Object.getPrototypeOf(userOne) === user }</p>`);
+        </script>
+    </body>
+</html>

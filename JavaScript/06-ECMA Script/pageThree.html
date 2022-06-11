@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arrow Functions</title>
+    </head>
+    <body>
+        <center>
+            <h2>Arrow Functions</h2>
+            <p>
+                <b>Description : </b>Arrow functions (also called "fat arrow functions") are undoubtedly
+                one of the more popular features of ES6. They introduced a new way of writing concise
+                functions.</p>
+
+                <p>Arrow functions - also called "fat arrow" functions, from CoffeeScript (a 
+                    transcompiled language) - are a more concise syntax for writing function
+                    expressions. They utilize a new token, =>, that looks like a fat arrow. Arrow
+                    functions are anonymous and change the way this binds in functions.                
+                </p>
+            </p>
+        </center>    
+
+        <script>
+            function displayOne(){
+                document.write("<h2>This is a display one function</h2>");
+            }
+            displayOne();
+
+            var displayTwo = function(){
+                document.write("<h2>This is a display two function</h2>");
+            }
+            displayTwo();
+
+            var displayThree = () => document.write("<h2>This is a display three function</h2>");
+            displayThree();
+
+            var displayFour = function(firstName, lastName){
+                document.write("<h2>This is a display four function</h2>" + firstName + " " + 
+                lastName + "<br><br>");
+            }
+            displayFour("JavaScriptOne", "ECMA ScriptOne");
+
+            var displayFive = (firstName, lastName) => document.write("<h2>This is a display five function</h2>" + firstName + " " + 
+                lastName + "<br><br>");
+            displayFive("JavaScriptTwo", "ECMA ScriptTwo");                       
+        </script>
+    </body>
+</html>

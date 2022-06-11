@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hoisting</title>
+    </head>
+    <body>
+        <h1>Hoisting</h1>
+
+        <h2>Function Hoisting</h2>
+        <script>
+            sayHello();
+
+            function sayHello(){
+                document.write("<h3>Say Hello Function</h3>");
+            }
+        </script>
+
+        <h2>Variable Hoisting</h2>
+        <script>
+            str = "Hello World!";
+            document.write("<h3> str is : " + str + "</h3>");
+            var str;
+
+            document.write("<h3> strOne is : " + strOne + "</h3>");
+            var strOne;
+            strOne = "Hello World!";
+
+            var x = 5;
+            var y;
+            document.write("<h3> x + , + y is : " + x + ", " + y + "</h3>");
+            y = 10;
+
+            var a = 3;
+            b = 6;
+            document.write("<h3> a + , + b is : " + a + ", " + b + "</h3>");            
+            var b;
+            
+        </script>
+    </body>
+</html>

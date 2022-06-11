@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Progress Tag</title>
+    <style>
+        progress{
+            height: 30px;
+            width: 100%;                 
+        }             
+    </style>
+</head>
+<body>
+    <center>
+        <h1>PROGRESS TAG</h1>
+    </center>    
+    <hr>
+
+    <h2>DEFAULT PROGRESS</h2>
+    <progress></progress>
+
+    <h2>PROGRESS TAG WITH ITS ATTRIBUTE (STATIC PROGRESS)</h2>
+    <progress class="w3-grey" min="1" max="100" value="50"></progress>
+
+    <h2>DYNAMIC PROGRESS</h2>
+    <progress min="1" max="100" id="progress"></progress>
+
+    <!-- <progress style="width: 100%;">Hi this is progress</progress>
+
+    <progress style="width: 100%;" min="1" max="100">Hi this is progress</progress>
+
+    <progress style="width: 100%;" min="1" max="100" id="progress">Hi this is progress</progress> -->
+
+    <button type="button" onclick="callProgress();">Click for progress</button>
+
+    <button type="button" onclick="resetProgress();">Click to reset progress</button>
+
+    <script>
+        var gval=1;
+        function callProgress()
+        {            
+            if(gval<=100){
+                gval++;
+                document.getElementById("progress").value = gval;
+            }
+        }
+
+        function resetProgress()
+        {
+            document.getElementById("progress").value = 0;
+            gval = 1
+        }
+
+        setInterval("callProgress()", 1000);
+    </script>
+</body>
+</html>

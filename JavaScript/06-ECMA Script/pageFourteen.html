@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prototype</title>
+    </head>
+    <body>
+        <h1>Prototype Object</h1>
+        <p>Prototype Objects to acquire properties and features from one another.</p>
+
+        <strong>Syntax</strong>
+        <p>ClassName.prototype.methodName</p>
+
+        <script>
+            function Employee(firstName, lastName) {
+                this.firstNameOne = firstName;
+                this.lastNameOne = lastName;
+            }
+
+            var emp = new Employee("React", "Angular");
+            document.write(emp.firstNameOne + "<br>");
+            document.write(emp.lastNameOne + "<br>");
+
+            Employee.prototype.fullName = function() {
+                return this.firstNameOne + " " + this.lastNameOne;
+            };
+
+            document.write(emp.fullName());
+        </script>
+
+        <script>
+            class BePractical {
+                constructor(fName, lName) {
+                    this.firstName = fName;
+                    this.lastName = lName;
+                }
+            }
+
+            var be = new BePractical("Hariteja", "Varanasi");
+
+            BePractical.prototype.result = function() {
+                return this.firstName + " " + this.lastName;
+            }
+            document.write(be.result());
+        </script>
+    </body>
+</html>

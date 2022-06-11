@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- <script src="assets/js/ext.js"></script> -->
+    </head>
+    <body>
+        <h3>External js function execution using call back (Asynchronous)</h3>
+        <p>Asynchronous code allows the program to be executed immediately</p>        
+        <p>Asynchronous programming allows you to perform multiple requests 
+            simultaneously and complete more tasks faster</p>
+
+        <script>
+            function loadScript(path, callback) {
+                console.log(path);
+                document.write(`<h3>path is ${ path } </h3>`);
+
+                console.log(callback);
+                document.write(`<h3>callback is ${ callback } </h3>`);
+
+                let scriptVar = document.createElement("script");
+                scriptVar.src = path;
+
+                scriptVar.onload = () => callback();
+                document.head.append(scriptVar);
+            }
+            //loadScript("assets/js/ext.js", 100);
+            setTimeout("loadScript('assets/js/ext.js', () => {sum(200,300);})", 2000);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rest Operator</title>
+    </head>
+    <body>
+        <h3>Rest Operator</h3>
+
+        <script>
+            function sumOfDigits(...num) {
+                document.write(`<h3>num = ${ num } </h3>`);
+                let sum=0;
+                try {
+                    for(let x of num){
+                        sum += x;
+                    }
+                    document.write(`<h3>Sum of Digits = ${ sum } </h3>`);
+                } catch (error) {
+                    document.write(`<h3 style='color:red'>error is ${ error } </h3>`);                    
+                }
+            }
+
+            sumOfDigits(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SCOPES</title>
+    </head>
+    <body>
+        <script>
+
+            let a = 15;
+
+            if(a > 12){
+                var b = 20;
+                let c = 25;
+                document.write(`<h3>Local = ${ a } </h3>`);
+                document.write(`<h3>Local = ${ b } </h3>`);
+                document.write(`<h3>Local = ${ c } </h3>`);
+            }
+
+            document.write(`<h3>Global = ${ a } </h3>`);
+        </script>        
+    </body>
+</html>

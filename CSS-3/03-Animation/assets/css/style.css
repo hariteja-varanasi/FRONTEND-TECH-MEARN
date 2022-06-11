@@ -1,0 +1,80 @@
+.animationOne{
+    background: #FC466B;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 30px;
+    height: 300px;    
+    /*animation: animationOne;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;*/
+    animation: animationOne 10s infinite;
+}
+
+.animationOne>h1, .animationTwo>h1, .animationThree>h1{
+    text-align: center;
+    color: #fff;
+    font-size: 60px;
+    text-shadow: 3px 3px 3px #000;
+}
+
+.animationOne>h1:hover, .animationTwo>h1:hover, .animationThree>h1:hover{
+    color: skyblue;
+    text-shadow: 3px 3px 3px #000;
+}
+
+@keyframes animationOne {
+    from{background: #FC466B;}    
+    to{background: #9546FC;}
+}
+
+.animationTwo{
+    background: url(../images/desktop.jpg) no-repeat center;
+    background-size: 100%;
+    height: 500px;
+    margin: 30px;
+    border-radius: 10px;
+    padding: 30px;
+    animation: animationTwo 10s infinite;
+}
+
+@keyframes animationTwo {
+    from{background: url(../images/desktop.jpg) no-repeat top;}
+    to{background: url(../images/desktop.jpg) no-repeat bottom;}
+}
+
+.animationThree{
+    background: #FC466B;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 30px;
+    position: absolute;
+    animation: animationThree 10s infinite;
+}
+
+@keyframes animationThree {
+    0%{
+        background: #FC466B;
+        top: 0px;
+        left: 0px;
+    }    
+    25%{
+        background: cadetblue;
+        top: 0px;
+        left: 600px;
+    }
+    50%{
+        background: chartreuse; 
+        top: 400px;
+        left: 600px;
+    }
+    75%{
+        background: teal;
+        top: 400px;
+        left: 0px;
+    }
+    100%{
+        background: #FC466B;
+        top: 0px;
+        left: 0px;
+    }
+}

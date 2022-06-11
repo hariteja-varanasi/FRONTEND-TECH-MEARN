@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Property Inside Class</title>
+    </head>
+    <body>
+        <script>
+            class User {
+                constructor() {
+                    document.write(`<h3>Constructor Called</h3>`);
+
+                    this.name = "Hariteja";
+                    this.email = "hv@gmail.com";
+                    this.mobile = "1234567890";
+                    this.account = {
+                        bank: "Bank",
+                        accNo: 123456,
+                        balance: 20000
+                    }
+                }
+
+                getUser() {
+                    return "Hi " + this.name + ", welcome to JS";
+                }
+            }
+
+            let x = new User();
+
+            document.write(`<h3> ${ x.getUser() } </h3>`);
+            document.write(`<h3> ${ x.email } </h3>`);
+            document.write(`<h3> ${ x.mobile } </h3>`);
+            document.write(`<h3> ${ x.name } </h3>`);
+            document.write(`<h3> ${ x.account.bank } </h3>`);
+            document.write(`<h3> ${ x.account.accNo } </h3>`);
+            document.write(`<h3> ${ x.account.balance } </h3>`);
+        </script>        
+    </body>
+</html>

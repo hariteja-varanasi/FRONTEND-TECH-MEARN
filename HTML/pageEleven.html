@@ -1,0 +1,139 @@
+<html>
+<body>
+    <title>HTML FORM</title>
+</body>
+<body>
+    <center>
+        <h1>HTML FORM</h1>
+    </center>
+    <hr>
+    
+    <h3>Default Form</h3>
+
+    <form action="">
+        <button type="submit">SUBMIT</button>
+        <button type="reset">RESET</button>
+        <button type="button">CANCEL</button>
+    </form>
+
+    <h3>Example Form</h3>
+    <form action="">
+        <label for="">Enter First Name :</label>
+        <input type="text" placeholder="First Name" name="firstName" id="firstName" value="HTML-5" readonly required>
+
+        <label for="">Enter Middle Name :</label>
+        <input type="text" placeholder="Middle Name" name="middleName" id="middleName" value="CSS" readonly required>
+
+        <label for="">Enter Last Name :</label>
+        <input type="text" placeholder="Last Name" name="lastName" id="lastName" value="JS" readonly required>
+        
+        <button type="submit">SUBMIT</button>
+        <button type="reset">RESET</button>
+        <button type="button">CANCEL</button>        
+    </form>
+    <h3>Employee Form</h3>
+    <form action="">
+        <fieldset>
+            <legend>Candidate Info</legend>
+            <label for="">Enter First Name :</label>
+            <input type="text" placeholder="First Name" name="firstName" id="firstName" readonly required>
+            
+            <label for="">Enter Middle Name :</label>
+            <input type="text" placeholder="Middle Name" name="middleName" id="middleName" readonly required>
+            
+            <label for="">Enter Last Name :</label>
+            <input type="text" placeholder="Last Name" name="lastName" id="lastName" readonly required>
+        </fieldset>
+        <fieldset>
+            <legend>Parent Info</legend>
+            <label for="">Enter Father's Name :</label>
+            <input type="text" placeholder="Father's Name" name="fatherName" id="fatherName" readonly required>
+            
+            <label for="">Enter Mother's Name :</label>
+            <input type="text" placeholder="Mother's Name" name="motherName" id="motherName" readonly required>
+        </fieldset>
+        <fieldset>
+            <legend>Personal Info</legend>
+            <label for="">DOB</label>
+            <input type="datetime-local" name="dob" id="dob">
+
+            <label for="">Email</label>
+            <input type="text" placeholder="Email" name="email" id="email" readonly required>
+
+            <label for="">Password</label>
+            <input type="password" placeholder="Password" name="password" id="password" readonly required>
+        </fieldset>
+        <fieldset>
+            <legend>Gender</legend>
+            <label for="">Male</label>
+            <input type="radio" name="gender" id="male" checked value="Male" required/>
+
+            <label for="">Female</label>
+            <input type="radio" name="gender" id="female" value="Female" required/>
+        </fieldset>
+        <fieldset>
+            <legend>Languages</legend>
+            <label for="">Kannada</label>
+            <input type="checkbox" name="kannada" id="kannada" value="Kannada" />
+
+            <label for="">Hindi</label>
+            <input type="checkbox" name="hindi" id="hindi" value="Hindi" />
+
+            <label for="">English</label>
+            <input type="checkbox" name="english" id="english" value="English" />
+
+            <label for="">Telugu</label>
+            <input type="checkbox" name="telugu" id="telugu" value="Telugu" />
+
+            <label for="">Tamil</label>
+            <input type="checkbox" name="tamil" id="tamil" value="Tamil"/>
+
+            <label for="">Marathi</label>
+            <input type="checkbox" name="marathi" id="marathi" value="Marathi"/>
+        </fieldset>
+        <fieldset>
+            <legend>Contact Info</legend>            
+            <label for="">Enter Local Address</label>
+            <textarea name="localAddr" id="localAddr" placeholder="Local Address" cols="70" rows="10"></textarea>
+            <label for="">Permanent Address</label>
+            <textarea name="permAddr" id="permAddr" placeholder="Permanent Address" cols="70" rows="10"></textarea>            
+        </fieldset>
+        <fieldset>
+            <legend>Qualification</legend>
+            <select name="qualificationList" id="qualificationList">
+                <option value="selectQual" disabled>------ Select Qua;ification ----------</option>
+                <option value="SSLC">SSLC</option>
+                <option value="PUC">PUC</option>
+                <option value="DIPLOMA">DIPLOMA</option>
+                <option value="BACHELOR" selected>BACHELOR'S DEGREE</option>
+                <option value="MASTERS">MASTER'S DEGREE</option>
+                <option value="DOCTORATE">DOCTORATE'S DEGREE</option>    
+                
+                <optgroup>
+                    <option value="BECivil" disabled>BE in CIVIL</option>
+                    <option value="BEMech">BE in MECH</option>
+                    <option value="BEECE">BE in ECE</option>
+                    <option value="BEEEE">BE in EEE</option>
+                    <option value="BECSE">BE in CSE</option>
+                    <option value="BEIT">BE in IT</option>
+                </optgroup>
+
+                <optgroup>
+                    <option value="MSCivil" disabled>MS in CIVIL</option>
+                    <option value="MSMech">MS in MECH</option>
+                    <option value="MSECE">MS in ECE</option>
+                    <option value="MSEEE">MS in EEE</option>
+                    <option value="MSCSE">MS in CSE</option>
+                    <option value="MSIT">MS in IT</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Buttons</legend>
+            <button type="submit">SUBMIT</button>
+            <button type="reset">RESET</button>
+            <button type="button">CANCEL</button>            
+        </fieldset>
+    </form>
+</body>
+</html>

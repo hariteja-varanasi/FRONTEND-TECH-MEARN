@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Tag</title>
+</head>
+<body>
+    <center>
+        <h1>This is CANVAS TAG</h1>
+        <p>
+            The HTML canvas element provides HTML a bitmapped surface to work with. It is used to draw graphics on the web page.
+    
+            The <b>HTML 5 canvas tag</b> is used to draw graphics using scripting language like JavaScript.
+        </p>
+    </center>        
+
+    <h2>Default CANVAS Tag</h2>
+    <canvas></canvas>
+    <hr>
+
+    <canvas>This is First Canvas Tag</canvas>
+    <hr>
+
+    <canvas>
+        <h1>CANVAS EXAMPLE</h1>
+    </canvas>
+    <hr>
+
+    <canvas id="myCanvas2" width="300px" height="100px" style="border: 2px solid red;"></canvas>
+
+    <p>
+        <b>
+            Note: It is always necessary to specify the id attribute and the height & width attribute to define the size of the canvas. You can have multiple canvas elements on one HTML page.
+        </b>
+    </p>
+
+    <center>
+        <h1>CANVAS RECTANGLE</h1>
+        <canvas id="myCanvas3" width="300" height="250" style="border: 1px solid blue;"></canvas>
+    </center>
+
+    <script>
+        var c = document.getElementById("myCanvas3").getContext("2d");
+        c.fillStyle = "red";
+        c.fillRect(25,25,250,200);
+
+        c.fillStyle = "yellow";
+        c.font="30px Times New Roman";
+        c.fillText("Hello HTML-5", 50, 100);
+    </script>
+
+    <center>
+        <h1>Drawing Line on Canvas</h1>
+        <canvas id="myCanvasLine" width="400" height="500" style="border:2px solid yellow"></canvas>
+    </center>
+
+    <script>
+        var c = document.getElementById("myCanvasLine").getContext("2d");
+        c.beginPath();
+            c.strokeStyle="green";
+            c.lineWidth=10;
+            c.moveTo(0,0);
+            c.lineTo(400,500);
+            c.stroke();
+        c.closePath();
+
+        c.beginPath();
+            c.strokeStyle="red";
+            c.lineWidth=5;
+            c.moveTo(50,0);
+            c.lineTo(400,400);
+            c.stroke();
+        c.closePath();
+    </script>
+
+    <hr>
+
+    <center>
+        <h1>Drawing Circle on Canvas</h1>
+        <canvas id="myCanvasCircle" width="400" height="200" style="border: 1px solid red;"></canvas>
+    </center>
+
+    <script>
+        var c = document.getElementById("myCanvasCircle").getContext("2d");
+        c.arc(200, 100, 90, 0, 2*Math.PI);
+        c.stroke();
+    </script>
+
+    <hr>
+
+    <center>
+        <h1>Drawing Text on Canvas</h1>
+        <canvas id="myTextCanvas" width="578" height="200" style="border:1px solid red"></canvas>
+    </center>
+
+    <script>
+        var canvas = document.getElementById("myTextCanvas").getContext("2d");
+        canvas.font ="40pt Times New Roman";
+        canvas.fillStyle = "coral";
+        canvas.fillText("Hello HTML5!", 150, 100)
+    </script>
+</body>
+</html>

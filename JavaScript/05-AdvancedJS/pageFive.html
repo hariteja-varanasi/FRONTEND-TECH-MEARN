@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Adding Event Listener for Different Event Type</h1>
+    <button type="button" id="myBtn">Click Me</button>
+    <script>
+        //Selecting Button Element
+        var btn = document.getElementById("myBtn");
+        //Defining Custom Function
+        function sayHello() {
+            alert("Hi,How Are You Doing?");
+        }
+        //sayHello();
+        function setHoverColor() {
+            btn.style.background = "green"
+        }
+        //setHoverColor();
+        function setNormalColor() {
+            btn.style.background = "";
+        }
+        //setNormalCorol();
+        btn.addEventListener("click", sayHello);
+        btn.addEventListener("mouseover", setHoverColor);
+        btn.addEventListener("mouseout", setNormalColor);
+    </script>
+</body>
+
+</html>

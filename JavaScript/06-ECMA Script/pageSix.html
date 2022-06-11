@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spread Operator</title>
+    </head>
+    <body>
+        <h3>Spread (...) operator with Math Constructor</h3>
+
+        <script>
+            var num = [44,455,56,11,77,99,900];
+            document.write(`<h3> Max = ${ Math.max(num) } </h3>`);
+            document.write(`<h3> Max with ... = ${ Math.max(...num) } </h3>`);
+            document.write(`<h3> Max with array = ${ Math.max(44,455,56,11,77,99,900) } </h3>`);
+        </script>
+    </body>
+</html>

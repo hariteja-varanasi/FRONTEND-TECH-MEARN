@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="pp" style="color: red; font-size: 20px;">This is a paragraph</p>
+        <p>This is another paragraph</p>
+
+        <script>
+            var elem =document.getElementById("pp");
+
+            console.log("elem color is : " + elem.style.color);
+            console.log("elem font size is : " +elem.style.fontSize);
+            console.log("elem font style is : " +elem.style.fontStyle);
+
+            var styles = window.getComputedStyle(elem);
+
+            console.log("elem styles color is : " + styles.getPropertyValue("color"));
+            console.log("elem styles font size is : " + styles.getPropertyValue("font-size"));
+            console.log("elem styles font weight is : " + styles.getPropertyValue("font-weight"));
+            console.log("elem styles font style is : " +styles.getPropertyValue("font-style"));
+        </script>
+    </body>
+</html>

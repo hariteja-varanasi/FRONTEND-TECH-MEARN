@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{
+                background-color: goldenrod;
+                padding: 20px;
+                margin: 20px;
+                color: #fff;                
+            }                    
+            button{
+                height: 40px;
+                width: 70px;
+                background-color: white;
+                border: 2px solid blueviolet;
+                font-size: 17px;
+                border-radius: 10px;
+            }
+            #fadeToggle{
+                height: 40px;
+                width: 100px;
+                background-color: white;
+                border: 2px solid blueviolet;
+                font-size: 17px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <button id="dafein">fadeIn</button>
+        <button id="fadeout">fadeOut</button>
+        <button id="fadeToggle">fadeToggle</button>
+        <button id="fadeto">fade to</button>        
+
+        <div id="paraDiv">
+            <p>This is a Paragraph</p>
+            <p>This is a Paragraph</p>
+            <p>This is a Paragraph</p>
+            <p>This is a Paragraph</p>
+        </div>
+
+        <script src="assets/js/jquery.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#fadein").click(function(){
+                    $("#paraDiv").fadeIn("slow");
+                });
+                $("#fadeout").click(function(){
+                    $("#paraDiv").fadeOut("slow");
+                });
+                $("#fadeToggle").click(function(){
+                    $("#paraDiv").fadeToggle(2000);
+                });
+                $("#fadeto").click(function(){
+                    $("#paraDiv").fadeTo("slow", 0.6);
+                });
+            });
+            
+        </script>
+
+    </body>
+</html>

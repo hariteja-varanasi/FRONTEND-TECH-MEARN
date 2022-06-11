@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Static Method..!</h1>
+        <p>JS provides static methods that belongs to the class instead of an instance of an that class. These methods are called directly on the class itself.</p>
+        <hr>
+
+        <h3>Points to remember..!</h3>
+        <ul>
+            <li>The static keyword is used to declare a static method.</li>
+            <li>The static method can be any name.</li>
+            <li>A class can contain more than one static method.</li>
+            <li>If we declare more than one static method with a similar name, the JS always invokes the last one.</li>
+            <li>We can use this keyword to call a static method within another static method.</li>
+            <li>We can't use this keyword directly to call a static method within the non-static method.</li>
+            <li>In such case, we can call the static method either using the class name or as the property of the constructor.</li>
+        </ul>
+        <hr>    
+        
+        <h3>Static Method Example</h3>
+        <script>
+            class DemoZero {
+                static display(){
+                    document.write("<h3>This is display static method in DemoZero class");
+                }
+            }
+            DemoZero.display();
+        </script>
+
+    <h3>Static Method Example 2</h3>
+    <script>
+        class DemoOne {
+            static displayOne(){
+                document.write("<h3>This is display one static method in DemoOne class");
+            }
+
+            static displayTwo(){
+                document.write("<h3>This is display two static method in DemoOne class");
+            }
+        }
+
+        DemoOne.displayOne();
+        DemoOne.displayTwo();
+    </script>
+
+    <h3>Static Method Example 3</h3>
+    <script>
+        class DemoTwo {
+            static displayOne(){
+                document.write("<h3>This is display one static method in DemoTwo class");
+            }
+
+            static displayOne(){
+                document.write("<h3>This is second display one static method in DemoTwo class");
+            }
+        }
+
+        DemoTwo.displayOne();        
+    </script>
+
+    <h3>Static Method Example 4</h3>
+    <script>
+        class DemoThree{
+            static display(){
+                document.write("<h3>This is display static method in DemoThree class");
+            }
+
+            constructor() {
+                DemoThree.display();
+            }
+        }
+    </script>
+
+    <h3>Static Method Example 5</h3>
+    <script>
+        class DemoFour {
+            
+            static display(){
+                document.write("<h3>This is display static method in DemoFour class");
+            }
+
+            display() {
+                document.write("<h3>This is display non-static method in DemoFour class");
+                DemoFour.display();
+            }
+        }
+
+        var demoFour = new DemoFour();
+        demoFour.display();
+    </script>
+
+    <h3>Static Method Exmaple 6</h3>
+    <script>
+        class StaticMethodCall {
+            static staticMethod() {
+                return "Static Method has been called";
+            }
+            static anotherStaticMethod() {
+                return this.staticMethod() + " from another static method";
+            }
+        }
+
+        document.write("<h3>" + StaticMethodCall.staticMethod() + "</h3>");
+        document.write("<h3>" + StaticMethodCall.anotherStaticMethod() + "</h3>");
+    </script>
+    </body>
+</html>

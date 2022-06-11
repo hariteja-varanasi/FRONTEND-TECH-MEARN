@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <h3 id="screenInfo"></h3>
+        <script>
+            var screenInfo = document.getElementById("screenInfo");
+            function getResolution() {
+                screenInfo.innerHTML = "Your screen width is: " + screen.width 
+                    + "x and height is : " + screen.height + "x";
+            }
+        </script>        
+
+        <button type="button" onclick="getResolution();">Get Resolution</button>
+
+        <script>
+            var screenInfo = document.getElementById("screenInfo");
+            function getAvailSize(){
+                screenInfo.innerHTML = "Your screen available width is: " + screen.availWidth 
+                    + "x and height is : " + screen.availHeight + "x";
+            }
+        </script>
+
+        <button type="button" onclick="getAvailSize();">Get Available Size</button>
+
+        <script>
+            var screenInfo = document.getElementById("screenInfo");
+            function getColorDepth(){
+                screenInfo.innerHTML = "Your screen color depth is: " + screen.colorDepth 
+                    + "x";
+            }
+        </script>
+
+        <button type="button" onclick="getColorDepth();">Get Color Depth</button>
+
+        <script>
+            var screenInfo = document.getElementById("screenInfo");
+            function getPixelDepth(){
+                screenInfo.innerHTML = "Your screen pixel depth is: " + screen.pixelDepth 
+                    + "x";
+            }
+        </script>
+
+        <button type="button" onclick="getPixelDepth();">Get Color Depth</button>
+    </body>
+</html>

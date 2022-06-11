@@ -1,0 +1,279 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+.desktopBanner{
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.desktopBanner>video{
+    width: 100%;
+}
+
+.desktopBanner>header{
+    position: absolute;
+    top: 3%;
+    left: 0%;
+    width: 100%;
+}
+
+.desktopBanner>header>nav{
+    margin: 20px;
+    background: linear-gradient(rgba(200,100,100,0.5), rgba(200,100,100,0.5));
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.desktopBanner>header>nav>ul{
+    list-style-type: none;
+    float: right;
+}
+
+.desktopBanner>header>nav>ul>li{
+    display: inline-block;
+    padding: 15px;
+}
+
+.desktopBanner>header>nav>ul>li:hover{
+    background: #fff;
+}
+
+.desktopBanner>header>nav>ul>li:hover a{
+    color: #7f7f7f;
+}
+
+.desktopBanner>header>nav>ul>li>a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.desktopBanner>h1{
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    font-size: 80px;
+    text-shadow: 5px 5px 5px #000;
+    color: #fff;
+    transition: 1s;
+}
+
+.desktopBanner>h1:hover{
+    transform: scale(1.1)
+}
+
+.tabBanner, .mobBanner{
+    display: none;
+}
+
+.karDistList{
+    text-align: center;
+}
+karDistList>h1, karDInfo>h1, .feedback>h1{
+    margin: 50px auto;
+    font-size: 30px;
+    transition: 1s;
+    color: #fff;
+    text-shadow: -1px -1px 2px #000, 3px 3px 3px #000;
+    text-align: center;
+}
+karDistList>h1:hover, karDInfo>h1:hover, .feedback>h1:hover{
+    transform: scale(1.1);
+}
+.karDistList>ul{
+    list-style-type: none;
+}
+.karDistList>ul>li{
+    padding: 60px;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+}
+.karDistList>ul>li:hover{
+    animation: karnataka 5s infinite;
+}
+@keyframes karnataka {
+    from{
+        background: url(../images/desktop.jpg) no-repeat top;
+        background-size: 100%;
+        color: red;
+    }    
+    to{
+        background: url(../images/desktop.jpg) no-repeat bottom;
+        background-size: 100%;
+        color: yellow;
+    }    
+}
+.karInfo>div{
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+.karInfo>h1{
+    text-align: center;
+}
+.karInfo>div>p{
+    padding: 20px;
+    text-align: justify;
+    line-height: 2;
+    text-indent: 50px;
+    margin-bottom: 20px;
+}
+.karInfo>div>p:last-child{
+    margin-bottom: 0px;
+}
+
+.feedback{
+    background: linear-gradient(rgba(254,165,1,0.4), rgba(255,255,255,0.4), rgba(0,128,0,0.4)), url(../images/image1.jpg) no-repeat center;
+    background-size: 100%;    
+    background-attachment: fixed;
+    padding: 50px;
+}
+
+.feedback input{
+    width: 100%;
+}
+
+.feedback>form>label{
+    font-weight: bold;
+    color: #fff;
+}
+
+.feedback>form>label>span{
+    color: red;
+}
+
+.feedback>form>input, .feedback>form>textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+
+.feedback>form>input:focus-visible, .feedback>form>textarea:focus-visible{
+    outline: 1px solid green;
+    border: none;
+}
+
+.feedback>form>button{
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.feedback>form>[type="submit"]{
+    background-color: lightsalmon;
+}
+
+.karDistList,.karInfo,.feedback{overflow: hidden;}
+
+footer{
+    background: linear-gradient(to right, #141e30, #243b55);
+    padding: 100px;
+    text-align: center;
+    color: #fff;
+}
+
+footer>p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fa-youtube-square, .fa-instagram-square, .fa-facebook-square, .fa-whatsapp-square, .fa-twitter-square, .fa-snapchat-square{
+    transition: 1s;
+    margin: 10px;
+}
+
+.fa-youtube-square:hover, .fa-instagram-square:hover, .fa-facebook-square:hover, .fa-whatsapp-square:hover, .fa-twitter-square:hover, .fa-snapchat-square:hover{
+    transform: scale(2.2);
+}
+
+.colOne{
+    width: 8.33%;
+}
+
+.colTwo{
+    width: 16.66%;
+}
+
+.colThree{
+    width: 25%;
+}
+
+.colFour{
+    width: 33.33%;
+}
+
+.colFive{
+    width: 41.66%;
+}
+
+.colSix{
+    width: 50%;
+}
+
+.colSeven{
+    width: 58.33%;
+}
+
+.colEight{
+    width: 66.66%;
+}
+
+.colNine{
+    width: 75%;
+}
+
+.colTen{
+    width: 83.33%;
+}
+
+.colEleven{
+    width: 91.66%;
+}
+
+.colTwelve{
+    width: 100%;
+}
+
+[class*="col"]{
+    float: left;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.carousel-section{
+    background-color: teal;
+    border: 1px solid;
+    padding: 20px;        
+}
+
+.carousel-section>img{
+    width: 100%;
+    height: 300px;
+}
+
+.carousel-section>h2{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.carousel-buttons{
+    text-align: center;
+}
+
+.carousel-container{
+    padding: 20px;
+}

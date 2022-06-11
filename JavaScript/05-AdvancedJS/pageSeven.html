@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Generator Functions</title>
+    </head>
+    <body>
+        <h3>Generator Functions</h3>
+
+        <script>
+            function user(){
+                var x=10,y=20,z;
+                return z=x+y;
+                /* unreachable code  */
+                return x;
+                document.write(z);
+                document.write(x);
+                /* unreachable code  */
+            }
+            function* userGenerator(){
+                yield "User One";
+                yield "User Two";
+                yield "User Three";
+                yield "User Four";
+                yield "User Five";
+            }
+
+            console.log(user());
+
+            document.write("<h3> user function returned " + user() + "</h3>");
+
+            for(let item of userGenerator()){
+                document.write(`<h3> ${ item } </h3>`);
+            }
+        </script>
+    </body>
+</html>

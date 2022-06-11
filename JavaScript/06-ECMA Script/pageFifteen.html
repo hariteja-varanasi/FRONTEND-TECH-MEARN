@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>JavaScript Inheritance</h1>
+        <p>JS inheritance is a mechanism that allows us to create new classes on the 
+            basis of already existing classes.</p>
+        <p>The JS <b>extends</b> keyword is used to create a child class on the basis
+             of a parent class.</p>
+        <p>It maintains an IS-A relationship.</p>
+
+        <script>
+            class Moment extends Date {
+                constructor() {
+                    super();
+                }
+            }   
+            
+            var momentObj = new Moment();
+            document.write("<h3>Current Date is : " + momentObj.getDate() + "/" + 
+            (momentObj.getMonth() + 1) + "/" + momentObj.getFullYear() + "</h3>");
+
+            class Bike {
+                constructor() {
+                    this.bikeName = "Ducati"
+                }
+            }
+
+            class Vehicle extends Bike {
+                constructor(name, price) {
+                    super();
+                    this.nameOne = name;
+                    this.priceOne = price;
+                }
+            }
+
+            var v = new Vehicle("GTX-1000", 1000000);
+            document.write("<h3>" + v.bikeName + " " + v.nameOne + " " + v.priceOne + "</h3>");
+
+
+        </script>
+    </body>
+</html>

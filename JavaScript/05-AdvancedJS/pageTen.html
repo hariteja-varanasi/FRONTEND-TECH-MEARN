@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Set Constructor</title>
+    </head>
+    <body>
+        <h3>Set Constructor</h3>
+
+        <script>
+            let emp = new Set();
+            document.write(typeof emp);
+
+            emp.add("User One");
+            emp.add("User Two");
+            emp.add("User Three");
+            emp.add("User Four");
+            emp.add("User Five");
+
+            document.write(`<h3> ${ emp.entries() } </h3>`);
+
+            emp.forEach(function(item){
+                document.write(`<h3> ${ item } </h3>`);
+            });
+
+            console.log("has('User One') = ", emp.has('User One'));
+            document.write(`<h3>has('User One') = ${ emp.has('User One') } </h3>`);
+
+            console.log("has('User Two') = ", emp.has('User Two'));
+            document.write(`<h3>has('User Two') = ${ emp.has('User Two') } </h3>`);
+
+            console.log("has('User Three') = ", emp.has('User Three'));
+            document.write(`<h3>has('User Three') = ${ emp.has('User Three') } </h3>`);
+
+            console.log("has('User Four') = ", emp.has('User Four'));
+            document.write(`<h3>has('User Four') = ${ emp.has('User Four') } </h3>`);
+
+            console.log("has('User Five') = ", emp.has('User Five'));
+            document.write(`<h3>has('User Five') = ${ emp.has('User Five') } </h3>`);
+
+            emp.delete("User One");
+            console.log("after delete = ", emp.entries());
+            document.write(`<h3>after delete = ${ emp.entries() } </h3>`);
+
+            console.log("has('User One') = ", emp.has('User One'));
+            document.write(`<h3>has('User One') = ${ emp.has('User One') } </h3>`);
+
+        </script>
+    </body>
+</html>

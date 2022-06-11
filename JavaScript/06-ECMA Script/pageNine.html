@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Map Method</title>
+    </head>
+    <body>
+        <h1>Map Method</h1>
+        <p>The map() method creates a new array with the results of calling a 
+            provided function on every element in the calling array</p>
+        <hr>
+
+        <script>
+            const smartPhones = [
+                {name: 'iPhone', price: 100},
+                {name: 'Galaxy S6', price: 200},
+                {name: 'Galaxy Note 5', price: 300},
+                {name: 'Galaxy Note 6', price: 400},
+                {name: 'Redmi', price: 500},
+            ];
+
+            for(var i = 0; i < smartPhones.length; i++) {
+                document.write("<br>" + smartPhones[i].name + "<br>");
+                document.write("<br>" + smartPhones[i].price + "<br>");
+            }
+
+            var prices = smartPhones.map(function(smartPhone){
+                return smartPhone.price;
+            });
+
+            console.log(prices);
+            document.write("<h3>prices : " + prices + "</h3>");
+
+            const pricesOne = smartPhones.map(smartPhone => smartPhone.price);
+            console.log(pricesOne);
+            document.write("<h3>pricesOne : " + pricesOne + "</h3>");            
+        </script>
+
+        <script>
+            const numbers = [2, 3, 4];
+            document.write("<h3>This is Number array result : </h3>" + numbers);
+            
+            const squares = numbers.map(n => n ** 2);
+            document.write("<h3>This is squares array result : </h3>" + squares);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+/* Extra Small */
+@media(max-width: 576px){
+    .jumbotron{
+        background-color: orange;        
+    }
+}
+
+/* Small */
+@media(min-width: 576px) and (max-width: 768px){
+    .jumbotron{
+        background-color: green;        
+    }    
+}
+
+/* Medium */
+@media(min-width: 768px) and (max-width: 992px){
+    .jumbotron{
+        background-color: teal;        
+    }
+}
+
+/* Large */
+@media(min-width: 992px) and (max-width: 1200px){
+    .jumbotron{
+        background-color: goldenrod;        
+        color: red;
+    }
+}
+
+/* Extra Large */
+@media(min-width: 1200px) and (max-width: 1400px){
+    .jumbotron{
+        background-color: darkslategray;        
+    }
+}
+
+/* Extra Extra Large */
+@media(min-width: 1400px){
+    .jumbotron{
+        background-color: maroon;        
+    }
+}

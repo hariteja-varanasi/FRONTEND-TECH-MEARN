@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .box{
+                width: 100px;
+                height: 100px;
+                background-color: #9d7ede;
+                margin-top: 30px;
+                border-style: solid;
+                border-color: #6f40ce;
+            }
+            button{
+                height: 40px;
+                width: 150px;
+                background-color: white;
+                border: 2px solid blueviolet;
+                font-size: 17px;
+                border-radius: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="button">Start Animation</button>
+        <button type="button">Stop Animation</button>
+        <div class="box"></div>
+
+        <script src="assets/js/jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button:first").click(function(){
+                    $(".box")
+                    .animate({
+                        width:"300px",
+                        height:"300px",
+                        "margin-left":"150px",
+                        "border-width":"10px",
+                        opacity:0.5}, 2000);
+                    /*.animate({width:"300px"})
+                    .animate({height:"300px"}, 2000)
+                    .animate({"margin-left":"150px"})
+                    .animate({"border-width":"10px"})
+                    .animate({opacity:0.5});*/
+                });
+
+                $("button:last").click(function(){
+                    $("div").removeAttr("style");
+                });
+            });
+        </script>
+    </body>
+</html>

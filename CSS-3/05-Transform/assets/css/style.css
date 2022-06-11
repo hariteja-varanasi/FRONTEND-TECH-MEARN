@@ -1,0 +1,21 @@
+section{
+    padding: 20px;
+    margin: 20px;
+    height: 100px;
+    width: 400px;
+    box-shadow: -3px -3px 3px #ccc, 3px 3px 3px #ccc;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.translate:hover{
+    transform: translate(100px, 100px);
+}
+
+.translateX:hover{
+    transform: translate(100px);
+}
+
+.translateY:hover{
+    transform: translate(100px);
+}

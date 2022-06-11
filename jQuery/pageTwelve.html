@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div, p{
+                border: 1px solid maroon;
+                padding: 10px;
+            }
+            button{
+                height: 60px;
+                width: 250px;
+                background-color: white;
+                border: 2px solid maroon;
+                font-size: 17px;
+                border-radius: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="btnbefore">Insert before DIV element</button>        
+        <button id="btnafter">Insert after DIV element</button>
+        <button id="btnprepend">Prepend to DIV element</button>
+        <button id="btnappend">Append to DIV element</button>
+
+        <div>
+            <p>This is a paragraph.</p>
+            <p>This is another paragraph.</p>
+        </div>
+
+        <script src="assets/js/jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btnbefore").click(function(){
+                    $("div").before("<p><b> Adding before the DIV </b></p>");
+                });
+
+                $("#btnafter").click(function(){
+                    $("div").after("<p><b> Adding after the DIV </b></p>");
+                });
+
+                $("#btnprepend").click(function(){
+                    $("div").prepend("<p><b> Prepending to the DIV </b></p>");
+                });
+
+                $("#btnappend").click(function(){
+                    $("div").after("<p><b> Appending to the DIV </b></p>");
+                });
+            });
+        </script>
+    </body>
+</html>

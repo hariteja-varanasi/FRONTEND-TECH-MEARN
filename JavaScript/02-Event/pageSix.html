@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cut Copy Paste Events</title>
+    </head>
+    <body>
+        <h3>Write some content inside input and then select and copy it</h3>        
+
+        <form action="">
+            <label for="">Enter some content</label>
+            <!-- <input type="text" name="first" id="first" onselect="sel()" oncopy="copy()">  -->
+            <input type="text" name="first" id="first"> 
+            <br><br>
+
+            <textarea name="textAreaOne" id="textAreaOne" cols="30" rows="10">                
+            </textarea>
+        </form>
+
+        <script>
+            function sel(){
+                alert("Content is selected");
+            }
+
+            function copy() {
+                alert("Content is sopied");
+            }
+
+            function paste() {
+                alert("Content is pasted");
+            }
+
+            function cut() {
+                alert("Content is cut, ready to paste.");
+            }
+
+            document.getElementById("first").onselect = sel;
+            document.getElementById("first").oncopy = copy;
+            document.getElementById("first").oncut = cut;
+            document.getElementById("first").onpaste = paste;
+
+            document.getElementById("textAreaOne").onselect = sel;
+            document.getElementById("textAreaOne").oncopy = copy;
+            document.getElementById("textAreaOne").oncut = cut;
+            document.getElementById("textAreaOne").onpaste = paste;
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            p{
+            font-size: larger;
+            font-weight: bold;
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <script>
+            function Student() {
+                this.name = "Hariteja";
+                this.gender = "Male";
+            }
+
+            var stud = new Student();
+
+            document.write("<p>Student.prototype : " + Student.prototype + "</p>");
+            //Object
+            console.log("Student.prototype : " + Student.prototype);
+
+            document.write("<p>stud.prototype : " + stud.prototype + "</p>");
+            //Undefined
+            console.log("student.prototype : " + stud.prototype);
+
+            document.write("<p>stud.__proto__ : " + stud.__proto__ + "</p>");
+
+            stud.__proto__.hariteja = "JavaScript";
+
+            studOne = new Student();
+
+            document.write("<p>stud.hariteja : " + stud.hariteja + "</p>");
+            document.write("<p>studOne.hariteja : " + studOne.hariteja + "</p>");
+
+            document.write("<p>type of Student.prototype : " + typeof Student.prototype + "</p>");
+            document.write("<p>type of stud.__proto__ : " + typeof stud.__proto__ + "</p>");
+
+            document.write("<p> Object.keys : " + Object.keys(stud) + " </p>");
+
+            for(var s in stud){
+                document.write("<p>Enumerate properties of stud : " + s);
+            }
+
+        </script>        
+    </body>
+</html>

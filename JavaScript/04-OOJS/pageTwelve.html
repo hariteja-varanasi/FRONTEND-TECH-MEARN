@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            h3{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Object based inheritance</h3>
+        <script>
+            var cOne = {
+                cOneTitle: "HTML",
+                cOneFee: 23423
+            };
+
+            let cTwo = Object.create(cOne, {
+                cTwoTitle: { value: "CSS" },
+                cTwoFee: { value: 12323 }
+            });
+
+            var cThree = Object.create(cTwo, {
+                cThreeTitle: { value: "Javascript"},
+                cThreeFee: { value: 33434 }
+            });
+
+            var bep = Object.create(cThree, {
+                name: { value: "Be-Practical"}
+            });
+
+            document.write(`<h3> ${ bep.cOneTitle } </h3>`);
+            document.write(`<h3> ${ bep.cOneFee } </h3>`);
+            document.write(`<h3> ${ bep.cTwoTitle } </h3>`);
+            document.write(`<h3> ${ bep.cTwoFee } </h3>`);
+            document.write(`<h3> ${ bep.cThreeTitle } </h3>`);
+            document.write(`<h3> ${ bep.cThreeFee } </h3>`);
+            document.write(`<h3> ${ bep.name } </h3>`);
+        </script>        
+    </body>
+</html>

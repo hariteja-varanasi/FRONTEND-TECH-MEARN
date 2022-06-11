@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div, p{
+                border: 1px solid maroon;
+                padding: 10px;
+                margin: 20px;
+            }
+            button{
+                height: 60px;
+                width: 250px;
+                background-color: white;
+                border: 2px solid maroon;
+                font-size: 17px;
+                border-radius: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="divOne">
+            <h2>This is the Remove DIV</h2>
+            <p>This is a Paragraph</p>
+            <p>This is another Paragraph</p>
+        </div>
+        <div id="divTwo">
+            <h2>This is the Empty DIV</h2>
+            <p>This is a Paragraph</p>
+            <p>This is another Paragraph</p>
+        </div>
+        <button id="btn">Remove</button>
+        <button id="btnOne">Empty</button>
+
+        <script src="assets/js/jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    $("#divOne").remove();
+                });
+                $("#btnOne").click(function(){
+                    $("#divTwo").empty();
+                });
+            });
+        </script>
+    </body>
+</html>

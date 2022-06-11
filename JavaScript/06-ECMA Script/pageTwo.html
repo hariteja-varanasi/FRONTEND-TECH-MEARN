@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Const</title>
+    </head>
+    <body>
+        <h3>const</h3>
+        
+        <script>
+            const x = 12;
+            document.write(`<h3>x is ${ x } </h3>`);
+
+            try {
+                x = 144;
+            } catch (error) {
+                document.write(`<h3 style='color:red'>error is ${ error } </h3>`);
+            }
+            x = 133;
+
+            document.write(`<h3>x after assign is ${ x } </h3>`);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3 id="viewHistory"></h3>        
+        <script>
+            var viewHistoryElem = document.getElementById("viewHistory");
+            function getViewHistory(){
+                viewHistoryElem.innerHTML = "<h3>You've accessed " + history.length + " web pages in this session.";
+            }
+        </script>        
+
+        <button type="button" onclick="getViewHistory();">Get View History</button><br>
+        <a href="pageFive.html">Click here to go to page five</a>
+
+        <script>
+            function goForward(){
+                window.history.forward();
+            }
+        </script>
+
+        <button type="button" onclick="goForward();">Go Forward</button>
+    </body>
+</html>

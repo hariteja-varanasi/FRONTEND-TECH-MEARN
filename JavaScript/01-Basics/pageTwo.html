@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-Basics</title>
+    </head>
+    <body>
+        <center>
+            <h1>JS-Variable</h1>
+        </center>        
+        <hr>
+        <script>
+            var firstVariable;
+
+            document.writeln("without value : ", firstVariable, "<br>");            
+            document.writeln("<b>without value : </b> ", firstVariable, "<br>");            
+            document.writeln("<b>without value : ", firstVariable, "</b><br>");            
+            document.writeln("<b>without value : " + firstVariable + "</b><br>");            
+            document.write(`<b>without value : ${firstVariable} </b><br> <hr> <br>`);
+
+            firstVariable = 100000;
+            document.write(`<b>with value : ${firstVariable} of type `, typeof(firstVariable),` </b><br> <hr> <br>`);
+
+            firstVariable = 100000.222222;
+            document.write(`<b>with value : ${firstVariable} of type `, typeof(firstVariable),` </b><br> <hr> <br>`);
+
+            firstVariable = 'A';
+            document.write(`<b>with value : ${firstVariable} of type `, typeof(firstVariable),` </b><br> <hr> <br>`);
+
+            firstVariable = "ABCD";
+            document.write(`<b>with value : ${firstVariable} of type `, typeof(firstVariable),` </b><br> <hr> <br>`);
+
+            firstVariable = true;
+            document.write(`<b>with value : ${firstVariable} of type `, typeof(firstVariable),` </b><br> <hr> <br>`);
+
+            firstVariable = new Date();
+            document.write(`<b>with value : ${firstVariable} of type `, typeof(firstVariable),` </b><br> <hr> <br>`);
+
+            firstVariable = [1, 1.232323, "ABCD"];
+            document.write(`<b>with value : ${firstVariable} of type `, typeof(firstVariable),` </b><br> <hr> <br>`);
+
+            firstVariable = {};
+            document.write(`<b>with value : ${firstVariable} of type `, typeof(firstVariable),` </b><br> <hr> <br>`);
+
+            /* var is a weaker signal and always has global scope */
+            /* let and const are block scope variables */
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Events</title>
+    </head>
+    <body>
+        <h3>Mouse Events</h3>
+
+        <h1 id="data">Hover your mouse pointer on me</h1>
+
+        <script>
+            function mouseEvent() {
+                document.getElementById("data").style.backgroundColor = "crimson";
+                document.getElementById("data").style.color = "#fff";
+                document.getElementById("data").style.padding = "20px";
+            }
+            document.getElementById("data").onmouseover = mouseEvent;
+            
+            function mouseEventOut() {
+                document.getElementById("data").style.backgroundColor = "#222";
+                document.getElementById("data").style.color = "gold";
+                document.getElementById("data").style.padding = "20px";
+            }
+            document.getElementById("data").onmouseout = mouseEventOut;
+        </script>
+    </body>
+</html>

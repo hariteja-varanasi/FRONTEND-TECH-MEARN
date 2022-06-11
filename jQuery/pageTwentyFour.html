@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    </head>
+    <body>
+        <select name="artists" id="se" class="form-select fs-3">
+            <option>Jackie Chan</option>
+            <option>Mike Tyson</option>
+            <option>Muhammad Ali</option>
+            <option>Bruce Lee</option>
+            <option>Brock Lesner</option>
+            <option>Conor McGregor</option>
+            <option>Rodtang Jitmuangon</option>
+        </select>        
+
+        <div id="loc" class="text-danger fs-3"></div>
+
+        <script src="assets/js/jquery.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#se").change(function(){
+                    //debugger;
+                    $("#loc").html("You have selected : " + $("#se")[0].value);
+                });
+            });
+        </script>
+    </body>
+</html>

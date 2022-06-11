@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    </head>
+    <body>
+        <input type="text" class="form-control fs-3 border border-dark" id="inputTxt" />
+        <span class="text-danger fs-3">Focus starts... write your name.</span>            
+
+        <input type="password" class="form-control fs-3 border border-dark" id="inputPwd" />
+        <span class="text-danger fs-3">Focus starts... write your password.</span>
+
+        <script src="assets/js/jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#inputTxt").focus(function(){
+                    $(this).next("span").fadeOut( 2000 );
+                });
+                $("#inputPwd").blur(function(){
+                    $(this).next("span").fadeIn( 2000 );
+                })
+            });
+        </script>
+    </body>
+</html>

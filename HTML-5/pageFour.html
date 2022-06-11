@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meter Tag</title>
+    <style>
+        meter{
+            height: 30px;
+            width: 100%;                 
+        }             
+    </style>
+</head>
+<body>
+    <center>
+        <h1>METER TAG</h1>
+    </center>    
+    <hr>
+    <h2>DEFAULT METER</h2>
+    <meter></meter>
+
+    <h2>METER TAG WITH ITS ATTRIBUTE (STATIC METER)</h2>
+    <meter min="1" max="100" value="50"></meter>
+
+    <h2>DYNAMIC PROGRESS</h2>
+    <meter style="width: 100%;" min="1" max="100" value="30" id="meter"></meter>
+    
+    <button type="button" onclick="increaseMeter();">Click to increment Meter</button>
+    <button type="button" onclick="resetMeter();">Click to reset Meter</button>
+
+    <script>
+        var gval=1;        
+        function increaseMeter()
+        {            
+            if(gval<=100){
+                gval++;
+                document.getElementById("meter").value = gval;
+            }
+        }
+
+        function resetMeter()
+        {
+            document.getElementById("meter").value = 0;
+            gval = 1
+        }
+
+        setInterval("increaseMeter()", 1000);
+    </script>
+</body>
+</html>
