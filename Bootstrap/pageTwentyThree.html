@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1 class="jumbotron display-1">Bootstrap Modal</h1>
+            </div>
+        </div>
+    </div>    
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="border lead p-3 my-3">
+                    <button class="btn btn-outline-info fs-3" data-bs-target="#demo" 
+                    data-bs-toggle="modal">Demo Modal</button>
+                    <div class="modal fade" id="demo">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="display-5">Modal Title</h5>
+                                    <button class="btn-close" 
+                                    data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="fs-3">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum earum quas, eos dolore odio doloribus deleniti totam laudantium dolores amet cumque. Accusantium cumque ad quisquam eaque ab veritatis deleniti temporibus!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, distinctio sint veniam, rerum a ipsum dolores, deserunt corporis illo molestiae ut. Quo necessitatibus est eaque enim ad et molestiae pariatur?
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary fs-3">Save Changes</button>
+                                    <button class="btn btn-secondary fs-3" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+</body>
+</html>
