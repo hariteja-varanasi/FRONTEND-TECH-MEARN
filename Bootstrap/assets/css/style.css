@@ -18,3 +18,17 @@
     width: 400px;
     height: 600px;
 }
+
+/*.nav-tabs .nav-item.show .nav-link, .nav-tabs, .nav-link.active {
+    color: var(--bs-nav-tabs-link-active-color);
+    background-color: lightblue;
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+}*/
+
+/*.nav-tabs .nav-link {
+    margin-bottom: calc(var(--bs-nav-tabs-border-width) * -1);
+    background: lightblue;
+    border: var(--bs-nav-tabs-border-width) solid transparent;
+    border-top-left-radius: var(--bs-nav-tabs-border-radius);
+    border-top-right-radius: var(--bs-nav-tabs-border-radius);
+}*/

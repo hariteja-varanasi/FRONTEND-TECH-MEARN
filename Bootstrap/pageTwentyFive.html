@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/media.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h1 class="jumbotron display-1">Bootstrap Navigation Bar</h1>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-dark bg-success navbar-expand-lg">
+            <div class="container">
+                <a href="#" class="navbar-brand fs-3">Brand Logo</a>
+                <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between d-lg-flex" id="menu">
+                    <ul class="navbar-nav fs-3">
+                        <li class="nav-item"><a href="" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Contact Us</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Products</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">FAQ</a></li>
+                        <li class="nav-item fs-3">
+                            <a href="#" class="nav-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                  </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>                
+            </div>            
+        </nav>
+
+        <script src="assets/js/bootstrap.bundle.js"></script>
+    </body>
+</html>
