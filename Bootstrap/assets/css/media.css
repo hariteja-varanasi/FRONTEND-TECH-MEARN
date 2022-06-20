@@ -37,6 +37,6 @@
 /* Extra Extra Large */
 @media(min-width: 1400px){
     .jumbotron{
-        background-color: maroon;        
+        background-color: lightgray;        
     }
 }
