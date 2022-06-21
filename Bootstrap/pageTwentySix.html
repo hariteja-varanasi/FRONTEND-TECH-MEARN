@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1 class="jumbotron display-1">Bootstrap Offcanvas</h1>
+            </div>
+        </div>
+    </div>    
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary fs-3" data-bs-toggle="offcanvas" data-bs-target="#demo">Open Canvas</button>
+
+                <div class="offcanvas offcanvas-start" id="demo">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title display-5">Sample Example</h5>
+                        <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <p class="fs-3">Home</p>
+                        <p class="fs-3">About Us</p>
+                        <p class="fs-3">Contact Us</p>
+                        <p class="fs-3">Service</p>
+                        <p class="fs-3">Products</p>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+</body>
+</html>
